@@ -55,7 +55,7 @@
             left: 20px;
             top: 50%;
             transform: translateY(-50%);
-            width: 300px;
+            width: 600px;
             max-width: 90%;
         }
         .excuse-card {
@@ -119,15 +119,18 @@
         <p>🥀 Need a **last-minute** escape excuse? Whether you’re ghosting or dodging a bad date, we’ve got your **lifeline**! 🚨</p>
         <p>💕 Love is temporary, but a good excuse lasts forever! 💔🚀</p>
         <div class="d-flex flex-column flex-md-row justify-content-center">
-            <a href="#" class="btn btn-custom btn-random" onclick="generateExcuse()">💔 Save Me With a Random Excuse!</a>
+            <form action="" method="post">
+                <a href="{% url 'home' %}" class="btn btn-custom btn-random">💔 Save Me With a Random Excuse!</a>
+            </form>
+            
             <a href="{% url 'custom_excuse' %}" class="btn btn-custom btn-customized">💕 Let Me Cook My Own Excuse!</a>
         </div>
     </div>
 
     <!-- Excuse Box (Now Positioned on Left Side) -->
-    <div class="excuse-container">
-        <div id="excuse-card" class="excuse-card">
-            <p id="excuse-text">Your excuse will appear here...</p>
+    <div class=" show">
+        <div id="excuse-card " class="excuse-card show">
+            <p id="excuse-text">{{excuse}}</p>
         </div>
     </div>
 
@@ -143,14 +146,6 @@
             setTimeout(() => heart.remove(), 6000);
         }
         setInterval(createHeart, 1200); // Slower for better spacing
-
-        function generateExcuse() {
-            const excuseText = document.getElementById("excuse-text");
-            const excuseCard = document.getElementById("excuse-card");
-
-            excuseText.innerText = {{excuse}};
-            excuseCard.classList.add("show");
-        }
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
