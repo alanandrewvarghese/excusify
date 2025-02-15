@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
-def home(requests):
-    return render('home.html')
+def home(request):
+    return render(request, 'home.html')
 
-def custom_excuse(requests):
-    return render('custom_excuse.html')
+def custom_excuse(request):
+    return render(request, 'custom_excuse.html')
