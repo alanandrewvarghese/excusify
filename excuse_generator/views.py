@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+def home(requests):
+    return render('home.html')
+
+def custom_excuse(requests):
+    return render('custom_excuse.html')
