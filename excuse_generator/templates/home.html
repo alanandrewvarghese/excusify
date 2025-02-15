@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>💔 Valentine's Day Emergency Excuse Generator 💔</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8a7ce;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            overflow: hidden;
+        }
+        .hero-section {
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            color: #ff0066;
+            text-shadow: 2px 2px #ffb6c1;
+        }
+        .hero-section p {
+            font-size: 1.5rem;
+            color: #99004d;
+            font-weight: bold;
+        }
+        .btn-custom {
+            font-size: 1.5rem;
+            padding: 12px 25px;
+            margin: 15px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0px 4px 10px rgba(255, 0, 102, 0.5);
+        }
+        .btn-random {
+            background-color: #c30c67;
+            color: white;
+        }
+        .btn-customized {
+            background-color: #ea4a8f;
+            color: white;
+        }
+        .btn-random:hover {
+            background-color: #8f043c;
+        }
+        .btn-customized:hover {
+            background-color: #ea0d95;
+        }
+        .floating-heart {
+            position: absolute;
+            color: #ff3366;
+            font-size: 2rem;
+            animation: float 5s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            50% { transform: translateY(-100px); opacity: 0.6; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container hero-section">
+        <h1>💘 Love in Trouble? We Got You! 💘</h1>
+        <p>🥀 Need a **last-minute** escape excuse? Whether you’re ghosting or dodging a bad date, we’ve got your **lifeline**! 🚨</p>
+        <p>💕Love is temporary, but a good excuse lasts forever! 💔🚀</p>
+        <div>
+            <a href="random.html" class="btn btn-custom btn-random">💔 Save Me With a Random Excuse!</a>
+            <a href="custom.html" class="btn btn-custom btn-customized">💕 Let Me Cook My Own Excuse!</a>
+        </div>
+    </div>
+
+    <!-- Floating hearts (extra cringe) -->
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.className = "floating-heart";
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() * window.innerWidth + "px";
+            heart.style.top = Math.random() * window.innerHeight + "px";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 500);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
