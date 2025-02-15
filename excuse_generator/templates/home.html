@@ -110,6 +110,10 @@
                 padding: 10px;
             }
         }
+        .layout-style {
+            max-width: 700px;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
@@ -123,12 +127,12 @@
                 <a href="{% url 'home' %}" class="btn btn-custom btn-random">💔 Save Me With a Random Excuse!</a>
             </form>
             
-            <a href="{% url 'custom_excuse' %}" class="btn btn-custom btn-customized">💕 Let Me Cook My Own Excuse!</a>
+            {% comment %} <a href="{% url 'custom_excuse' %}" class="btn btn-custom btn-customized">💕 Let Me Cook My Own Excuse!</a> {% endcomment %}
         </div>
     </div>
 
     <!-- Excuse Box (Now Positioned on Left Side) -->
-    <div class="show">
+    <div class=" layout-style show">
         <div id="excuse-card " class="excuse-card show">
             <p id="excuse-text">{{excuse}}</p>
         </div>
